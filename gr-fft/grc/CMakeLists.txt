@@ -20,6 +20,7 @@
 install(FILES
     fft_block_tree.xml
     fft_fft_vxx.xml
+    fft_fft_vxx_dc.xml
     fft_goertzel_fc.xml
     fft_logpwrfft_x.xml
     fft_ctrlport_probe_psd.xml

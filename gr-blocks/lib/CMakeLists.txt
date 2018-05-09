@@ -186,6 +186,7 @@ list(APPEND gr_blocks_sources
     stream_to_streams_impl.cc
     stream_to_tagged_stream_impl.cc
     stream_to_vector_impl.cc
+    streams_to_vectors_impl.cc
     streams_to_stream_impl.cc
     streams_to_vector_impl.cc
     stretch_ff_impl.cc

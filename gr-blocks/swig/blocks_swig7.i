@@ -42,6 +42,7 @@
 #include "gnuradio/blocks/stream_to_streams.h"
 #include "gnuradio/blocks/stream_to_tagged_stream.h"
 #include "gnuradio/blocks/stream_to_vector.h"
+#include "gnuradio/blocks/streams_to_vectors.h"
 #include "gnuradio/blocks/streams_to_stream.h"
 #include "gnuradio/blocks/streams_to_vector.h"
 #include "gnuradio/blocks/tag_debug.h"
@@ -65,6 +66,7 @@
 %include "gnuradio/blocks/stream_to_streams.h"
 %include "gnuradio/blocks/stream_to_tagged_stream.h"
 %include "gnuradio/blocks/stream_to_vector.h"
+%include "gnuradio/blocks/streams_to_vectors.h"
 %include "gnuradio/blocks/streams_to_stream.h"
 %include "gnuradio/blocks/streams_to_vector.h"
 %include "gnuradio/blocks/tag_debug.h"
@@ -87,6 +89,7 @@ GR_SWIG_BLOCK_MAGIC2(blocks, stream_mux);
 GR_SWIG_BLOCK_MAGIC2(blocks, stream_to_streams);
 GR_SWIG_BLOCK_MAGIC2(blocks, stream_to_tagged_stream);
 GR_SWIG_BLOCK_MAGIC2(blocks, stream_to_vector);
+GR_SWIG_BLOCK_MAGIC2(blocks, streams_to_vectors);
 GR_SWIG_BLOCK_MAGIC2(blocks, streams_to_stream);
 GR_SWIG_BLOCK_MAGIC2(blocks, streams_to_vector);
 GR_SWIG_BLOCK_MAGIC2(blocks, tag_debug);

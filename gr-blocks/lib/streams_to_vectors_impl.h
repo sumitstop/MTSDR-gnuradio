@@ -20,42 +20,25 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#define FFT_API
+#ifndef INCLUDED_STREAMS_TO_VECTORS_IMPL_H
+#define INCLUDED_STREAMS_TO_VECTORS_IMPL_H
 
-%include "gnuradio.i"
+#include <gnuradio/blocks/streams_to_vectors.h>
 
-//load generated python docstrings
-%include "fft_swig_doc.i"
+namespace gr {
+  namespace blocks {
 
-%{
-#include "gnuradio/fft/fft_vcc.h"
-#include "gnuradio/fft/fft_vfc.h"
-#include "gnuradio/fft/fft_vcc_dc.h"
-#include "gnuradio/fft/goertzel_fc.h"
-#include "gnuradio/fft/window.h"
-%}
+    class BLOCKS_API streams_to_vectors_impl : public streams_to_vectors
+    {
+    public:
+      streams_to_vectors_impl(size_t itemsize, size_t nitems_per_block);
 
-%include "gnuradio/fft/fft_vcc.h"
-%include "gnuradio/fft/fft_vfc.h"
-%include "gnuradio/fft/fft_vcc_dc.h"
-%include "gnuradio/fft/goertzel_fc.h"
-%include "gnuradio/fft/window.h"
+      int work(int noutput_items,
+	       gr_vector_const_void_star &input_items,
+	       gr_vector_void_star &output_items);
+    };
 
-GR_SWIG_BLOCK_MAGIC2(fft, fft_vcc);
-GR_SWIG_BLOCK_MAGIC2(fft, fft_vfc);
-GR_SWIG_BLOCK_MAGIC2(fft, fft_vcc_dc);
-GR_SWIG_BLOCK_MAGIC2(fft, goertzel_fc);
+  } /* namespace blocks */
+} /* namespace gr */
 
-
-#ifdef GR_CTRLPORT
-
-%{
-#include "gnuradio/fft/ctrlport_probe_psd.h"
-%}
-
-%include "gnuradio/fft/ctrlport_probe_psd.h"
-
-GR_SWIG_BLOCK_MAGIC2(fft, ctrlport_probe_psd);
-
-#endif /* GR_CTRLPORT */
-
+#endif /* INCLUDED_STREAMS_TO_VECTORS_IMPL_H */

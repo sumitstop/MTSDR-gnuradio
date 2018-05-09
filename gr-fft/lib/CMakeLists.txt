@@ -43,6 +43,7 @@ endif(ENABLE_GR_CTRLPORT)
 list(APPEND fft_sources
   fft.cc
   fft_vcc_fftw.cc
+  fft_vcc_fftw_dc.cc
   fft_vfc_fftw.cc
   goertzel_fc_impl.cc
   goertzel.cc
