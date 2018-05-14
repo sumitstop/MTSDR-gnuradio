@@ -118,7 +118,7 @@ namespace gr {
         }
         else {
           volk_32fc_32f_multiply_32fc(&dst[0], in, &d_window[0], d_fft_size);
-          volk_32fc_32f_multiply_32fc(&dst_1[0], in, &d_window_1[0], d_fft_size);
+          volk_32fc_32f_multiply_32fc(&dst_1[0], in_1, &d_window_1[0], d_fft_size);
         }
       }
       else {
