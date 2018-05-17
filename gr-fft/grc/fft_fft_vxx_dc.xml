@@ -5,7 +5,7 @@
 ###################################################
  -->
 <block>
-	<name>FFT</name>
+	<name>FFT DC</name>
 	<key>fft_vcc_dc</key>
 	<import>from gnuradio import fft</import>
 	<import>from gnuradio.fft import window</import>
@@ -33,7 +33,7 @@ fft.fft_vfc_dc($fft_size, $forward, $window, $nthreads)
 	<param>
 		<name>FFT Size</name>
 		<key>fft_size</key>
-		<value>1024</value>
+		<value>64</value>
 		<type>int</type>
 	</param>
 	<param>
@@ -52,7 +52,7 @@ fft.fft_vfc_dc($fft_size, $forward, $window, $nthreads)
 	<param>
 		<name>Window</name>
 		<key>window</key>
-		<value>window.blackmanharris(1024)</value>
+		<value>window.rectangular(64)</value>
 		<type>real_vector</type>
 	</param>
 	<param>
